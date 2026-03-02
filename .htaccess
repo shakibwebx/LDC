@@ -1,0 +1,230 @@
+RewriteEngine on
+#rewritecond %{http_host} ^london-dermatology-centre.co.uk [nc]
+#rewriterule ^(.*)$ http://www.london-dermatology-centre.co.uk/$1 [r=301,nc]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.london-dermatology-centre.co.uk/$1 [R=301,L] 
+RewriteCond %{http_host} ^london-dermatology-centre.co.uk [NC]
+RewriteRule ^(.*)$ https://www.london-dermatology-centre.co.uk/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} index\.html
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^the\-dermatology\-centre\.co\.uk$ [OR]
+#RewriteCond %{HTTP_HOST} ^www\.the\-dermatology\-centre\.co\.uk$
+#RewriteRule ^/?$ "http\:\/\/www\.the\-dermatology\-centre\.co\.uk\/" [R=301,L]
+
+redirect 301 /Dr-Roy.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /trichology.html https://www.london-dermatology-centre.co.uk/contact.html
+Redirect 301 /dr-tony-downs.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /rebecca-boys-rowe.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /mastopexy-surgery.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /ear-pinnaplasty-surgery.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /branchioplasty-surgery.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /breast-reduction-surgery-clinic.html https://www.london-dermatology-centre.co.uk/contact.html
+Redirect 301 /Janet-Holder.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /homeopathic-podiatry-treatment-clinic.html https://www.london-dermatology-centre.co.uk/contact.html
+Redirect 301 /earreshape.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /mastoplexy.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /breastreduction.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /my-naked-truth.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /my-naked-secret.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /naked.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /nasalreshaping.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /home.html http://www.london-dermatology-centre.co.uk/
+Redirect 301 /services.html http://www.london-dermatology-centre.co.uk/about-us.html
+Redirect 301 /omar-aziz.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /mario-anthony.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /weight-loss-team.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /sitelinks.html http://www.london-dermatology-centre.co.uk/sitemap.html
+Redirect 301 /special-offers.html http://www.london-dermatology-centre.co.uk/pricing.html
+Redirect 301 /dr-janet-amakye.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /tummy-tuck.html http://www.london-dermatology-centre.co.uk/liposonix-treatment-clinic.html
+Redirect 301 /tummytuck.html http://www.london-dermatology-centre.co.uk/liposonix-treatment-clinic.html
+Redirect 301 /liposuction.html http://www.london-dermatology-centre.co.uk/pronokal.html
+Redirect 301 /drpantelis.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /dr-victoria-gauba.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /fatima-malik.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /silhouette-soft-thread-lift.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /plexr-treatment-clinic.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /dr-omar-aziz.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /Sunil-Chopra.html http://www.london-dermatology-centre.co.uk/sunil-chopra.html
+Redirect 301 /calf-thigh-augmentation-surgery.html http://www.london-dermatology-centre.co.uk/contact.html
+Redirect 301 /faceandbrow.html http://www.london-dermatology-centre.co.uk/visia-skin-analysis.html
+Redirect 301 /eyelidsurgery.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /migraine-headache.html http://www.london-dermatology-centre.co.uk/blog/
+Redirect 301 /toothwhitening.html https://www.london-dermatology-centre.co.uk/contact.html
+Redirect 301 /sebaceous http://www.london-dermatology-centre.co.uk/sebaceous-cyst-removal.html
+Redirect 301 /paediatric-dermatologist http://www.london-dermatology-centre.co.uk/paediatric-dermatologist.html
+Redirect 301 /pharmacy.html http://www.london-dermatology-centre.co.uk/products.html
+Redirect 301 /Dr-Jennifer-Boone.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /Dr-Samuel-Menon.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /dr-aleksandar-godic.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /Dr-Genevieve-Osborne.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /balsam-alabassi.html http://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /weight-loss-PronoKal.html https://www.london-dermatology-centre.co.uk/pronokal.html
+Redirect 301 /request-a-call-back.html https://www.london-dermatology-centre.co.uk/contact.html
+Redirect 301 /cristal-cryolipolysis-treatment.html https://www.london-dermatology-centre.co.uk/aesthetic-treatments.html
+Redirect 301 /Book-a-free-consultation-with-Hyperhidrosis-Expert-Dr-Mario-Knight.html https://www.london-dermatology-centre.co.uk/contact.html
+Redirect 301 /breast-augmentation-surgery.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /goli-keffel.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /samuel-menon.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /newsletter-dermatology-centre.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /newsletter-ldc-may-2013.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /thanks-newsletter.html https://www.london-dermatology-centre.co.uk/thanks.html
+Redirect 301 /thigh-calf-augemntation https://www.london-dermatology-centre.co.uk
+Redirect 301 /thighcalfaugemntation https://www.london-dermatology-centre.co.uk
+
+Redirect 301 /eporex-treatment-clinic.html https://www.london-dermatology-centre.co.uk/facial-rejuvenation-clinic.html
+Redirect 301 /thermiva-treatment.html https://www.london-dermatology-centre.co.uk/aesthetic-treatments.html
+Redirect 301 /photodynamic-therapy-treatment-clinic.html https://www.london-dermatology-centre.co.uk/about-us.html
+Redirect 301 /sebacia-acne-treatment.html https://www.london-dermatology-centre.co.uk/acne-clinic.html
+Redirect 301 /gerri-facey.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /medical-camouflage-clinic.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /platelet-rich-plasma.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /dr-zainab-laftah.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /mccormack.html https://www.london-dermatology-centre.co.uk/una-jefford.html
+Redirect 301 /dr-nagham-obaid.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /sally-ho.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /dr-dan-hamond.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /dr-dan-hamond.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /elena-popova.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /mission-statement.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /patient-testimonials.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /dr-john-moran.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /gallery.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /our-medical-team.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /our-aesthetic-team.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /ask-our-dermatologists.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /dermatology-services.html https://www.london-dermatology-centre.co.uk/about-us.html
+Redirect 301 /skin-care-products.html https://www.london-dermatology-centre.co.uk/products.html
+Redirect 301 /skin-products.html https://www.london-dermatology-centre.co.uk/products.html
+Redirect 301 /allergy-treatment-clinic.html https://www.london-dermatology-centre.co.uk/allergy-clinic.html
+Redirect 301 /acne-treatment-clinic.html https://www.london-dermatology-centre.co.uk/acne-clinic.html
+Redirect 301 /keloid-scar-treatment-clinic.html https://www.london-dermatology-centre.co.uk/keloid-removal.html
+Redirect 301 /warts-treatment-clinic.html https://www.london-dermatology-centre.co.uk/wart-removal.html
+Redirect 301 /birthmark-removal-clinic.html https://www.london-dermatology-centre.co.uk/laser-birthmark-removal.html
+Redirect 301 /skin-cancer-treatment-clinic.html https://www.london-dermatology-centre.co.uk/skin-cancer-clinic.html
+Redirect 301 /mole-checks-clinic.html https://www.london-dermatology-centre.co.uk/mole-check.html
+Redirect 301 /sebaceous-cyst-removal-clinic.html https://www.london-dermatology-centre.co.uk/sebaceous-cyst-removal.html
+Redirect 301 /acne-scarring.html https://www.london-dermatology-centre.co.uk/acne-scar-treatment.html
+Redirect 301 /skin-mole-photography-clinic.html https://www.london-dermatology-centre.co.uk/mole-mapping.html
+Redirect 301 /wrinkles-lines-removal.html https://www.london-dermatology-centre.co.uk/anti-wrinkle-injections.html
+Redirect 301 /clear-brillant-treatment.html https://www.london-dermatology-centre.co.uk/clear-brillant-laser.html
+Redirect 301 /ipl-laser-hair-removal-clinic.html https://www.london-dermatology-centre.co.uk/laser-hair-removal.html
+Redirect 301 /fraxel-treatment-clinic.html https://www.london-dermatology-centre.co.uk/fraxel-laser.html
+Redirect 301 /thread-vein-removal-clinic.html https://www.london-dermatology-centre.co.uk/thread-vein-removal.html
+Redirect 301 /ipl-yag-thread-vein-treatment.html https://www.london-dermatology-centre.co.uk/thread-vein-removal.html
+Redirect 301 /thermage-clinic.html https://www.london-dermatology-centre.co.uk/thermage.html
+Redirect 301 /ipl-facial-skin-rejuvenation-clinic.html https://www.london-dermatology-centre.co.uk/ipl-skin-rejuvenation.html
+Redirect 301 /skin-cover-up-clinic.html https://www.london-dermatology-centre.co.uk/aesthetic-treatments.html
+Redirect 301 /dermal-fillers-treatment.html https://www.london-dermatology-centre.co.uk/dermal-fillers.html
+Redirect 301 /polynucelotides.html https://www.london-dermatology-centre.co.uk/polynucleotides.html
+Redirect 301 /pdo-thread-lift-collagen-stimulation.html https://www.london-dermatology-centre.co.uk/pdo-thread-lift.html
+Redirect 301 /anti-wrinkle-treatment.html https://www.london-dermatology-centre.co.uk/anti-wrinkle-injections.html
+Redirect 301 /facial-peels-treatment.html https://www.london-dermatology-centre.co.uk/facial-peels.html
+Redirect 301 /skin-peels-treatment.html https://www.london-dermatology-centre.co.uk/facial-peels.html
+Redirect 301 /tattoo-removal-clinic.html https://www.london-dermatology-centre.co.uk/tattoo-removal.html
+Redirect 301 /general-dermatology-clinic.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /acne-and-pigmentation-workshop.html https://www.london-dermatology-centre.co.uk/acne-clinic.html
+Redirect 301 /articles.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /payments.html https://www.london-dermatology-centre.co.uk/pricing.html
+Redirect 301 /mesotherapy-treatment.html https://www.london-dermatology-centre.co.uk/aesthetic-treatments.html
+Redirect 301 /complaints-procedure.html https://www.london-dermatology-centre.co.uk/privacy-notice.html
+Redirect 301 /nikki-economides.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /microdermabrasion-treatment.html https://www.london-dermatology-centre.co.uk/microdermabrasion.html
+Redirect 301 /stretch-marks-treatment-clinic.html https://www.london-dermatology-centre.co.uk/stretch-marks.html
+
+Redirect 301 /acne-treatment-cambridge.html https://www.london-dermatology-centre.co.uk/acne-clinic.html
+Redirect 301 /anti-wrinkle-treatment-cambridge.html https://www.london-dermatology-centre.co.uk/anti-wrinkle-injections.html
+Redirect 301 /birthmark-removal-clinic-cambridge.html https://www.london-dermatology-centre.co.uk/laser-birthmark-removal.html
+Redirect 301 /chemical-peels-treatment-cambridge.html https://www.london-dermatology-centre.co.uk/facial-peels.html
+Redirect 301 /dermal-fillers-treatment-cambridge.html https://www.london-dermatology-centre.co.uk/dermal-fillers.html
+Redirect 301 /dermatologist-cambridge.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /eczema-treatment-cambridge.html https://www.london-dermatology-centre.co.uk/eczema-treatment-clinic.html
+Redirect 301 /facial-rejuvenation-clinic-cambridge.html https://www.london-dermatology-centre.co.uk/facial-rejuvenation-clinic.html
+Redirect 301 /hair-loss-clinic-cambridge.html https://www.london-dermatology-centre.co.uk/hair-loss-clinic.html
+Redirect 301 /ipl-laser-hair-removal-clinic-cambridge.html https://www.london-dermatology-centre.co.uk/laser-hair-removal.html
+Redirect 301 /keloid-scar-treatment-cambridge.html https://www.london-dermatology-centre.co.uk/keloid-removal.html
+Redirect 301 /microdermabrasion-treatment-cambridge.html https://www.london-dermatology-centre.co.uk/microdermabrasion.html
+Redirect 301 /mole-checks-clinic-cambridge.html https://www.london-dermatology-centre.co.uk/mole-check.html
+Redirect 301 /paediatric-dermatologist-cambridge.html https://www.london-dermatology-centre.co.uk/paediatric-dermatologist.html
+Redirect 301 /pdo-thread-treatment-cambridge.html https://www.london-dermatology-centre.co.uk/pdo-thread-lift.html
+Redirect 301 /psoriasis-treatment-cambridge.html https://www.london-dermatology-centre.co.uk/psoriasis-treatment-clinic.html
+Redirect 301 /vitiligo-clinic-cambridge.html https://www.london-dermatology-centre.co.uk/vitiligo-treatment-clinic.html
+Redirect 301 /warts-treatment-cambridge.html https://www.london-dermatology-centre.co.uk/wart-removal.html
+Redirect 301 /sexual-health-clinic.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /sexual-health-clinic.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /sexual-health-laboratory.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /male-symptoms-Infections.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /female-symptoms-Infections.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /hiv-testing-service.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /pricing-for-sexual-health.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /pronokal.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /dr-rohaj-mehta.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /dr-christian-jessen.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /dr-thierry-vidal.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /mark-aziz.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /dermatologist-lectures.html https://www.london-dermatology-centre.co.uk
+Redirect 301 /blog/acne-scarring-treatments-2/ https://www.london-dermatology-centre.co.uk/blog/acne-scar-treatment-guide/
+Redirect 301 /blog/acne-scarring-treatments/ https://www.london-dermatology-centre.co.uk/blog/acne-scar-treatment-guide/
+Redirect 301 /surgical-dermatology.html https://www.london-dermatology-centre.co.uk/surgical-dermatologist.html
+Redirect 301 /hyperhydrosis-treatment.html https://www.london-dermatology-centre.co.uk/hyperhidrosis-treatment.html
+Redirect 301 /lichen-lanus.html https://www.london-dermatology-centre.co.uk/lichen-planus.html
+Redirect 301 /dr-shaun-roberts.html https://www.london-dermatology-centre.co.uk/shaun-roberts.html
+Redirect 301 /dr-neil-aghera.html https://www.london-dermatology-centre.co.uk/neil-aghera.html
+Redirect 301 /dr-neil-aghera.html https://www.london-dermatology-centre.co.uk/neil-aghera.html
+Redirect 301 /eczema-clinic.html https://www.london-dermatology-centre.co.uk/eczema-treatment-clinic.html
+Redirect 301 /psoriasis-clinic.html https://www.london-dermatology-centre.co.uk/psoriasis-treatment-clinic.html
+Redirect 301 /neil-aghera.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 301 /menopause-consortium.html https://www.london-dermatology-centre.co.uk/female-dermatologist.html
+
+Redirect 302 /Roberto-Verdolini.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 302 /dr-samira-yousefi.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 302 /dr-rex-melville.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 302 /dr-andrew-higgins.html https://www.london-dermatology-centre.co.uk/our-team.html
+Redirect 302 /our-research-team.html https://www.london-dermatology-centre.co.uk/our-team.html
+
+<IfModule mod_deflate.c>
+#The following line is enough for .js and .css
+AddOutputFilter DEFLATE js css
+AddOutputFilterByType DEFLATE text/plain text/xml application/xhtml+xml text/css application/xml application/rss+xml application/atom_xml application/x-javascript application/x-httpd-php application/x-httpd-fastphp text/html
+ 
+#The following lines are to avoid bugs with some browsers
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+ 
+# BEGIN EXPIRES
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 10 days"
+ExpiresByType text/css "access plus 1 week"
+ExpiresByType text/plain "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType application/x-javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 week"
+ExpiresByType application/x-icon "access plus 1 year"
+</IfModule>
+# END EXPIRES
+ 
+<IfModule mod_headers.c>
+<FilesMatch "\.(js|css|xml|gz)$">
+Header append Vary Accept-Encoding
+</FilesMatch>
+<FilesMatch "\.(ico|jpe?g|png|gif|swf)$">
+Header set Cache-Control "public"
+</FilesMatch>
+<FilesMatch "\.(css)$">
+Header set Cache-Control "public"
+</FilesMatch>
+<FilesMatch "\.(js)$">
+Header set Cache-Control "private"
+</FilesMatch>
+<FilesMatch "\.(x?html?|php)$">
+Header set Cache-Control "private, must-revalidate"
+</FilesMatch>
+</IfModule>
