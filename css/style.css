@@ -484,9 +484,9 @@ p span.dr-sign { font:normal 200.0% 'Euphoria Script'; color:#2c3a66;}
 .membership-section h2 { margin-bottom: 60px; color: #5f74b2; }
 
 /*-- Book Consultation --*/
-.book-consultation { position: relative; margin-bottom: 70px; text-align: center; overflow: hidden; min-height: 450px; }
-.book-consultation picture { display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-.book-consultation picture img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.book-consultation { position: relative; margin-bottom: 70px; text-align: center; overflow: hidden; }
+.book-consultation picture { display: block; position: relative; width: 100%; height: auto; }
+.book-consultation picture img { width: 100%; height: auto; object-fit: cover; display: block; }
 .book-consultation.no-margin { min-height: 450px; }
 .book-consultation.no-margin picture img { object-position: center 70%; }
 .book-consultation .global-overlay { background: transparent !important; position: absolute !important; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }
