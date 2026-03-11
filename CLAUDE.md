@@ -5,6 +5,53 @@
 
 ---
 
+## 11 March 2026 — Session 2 (Fixes & Optimizations)
+
+### ১. Doctify Widget Replace (দুটো জায়গায়)
+- **coverfold-এর নিচে** (line ~230) ও **Need Help section-এর পরে** (line ~1193) — দুটো widget-ই replace করা হয়েছে
+- পরিবর্তন: `containerId` → `0ojno8x7`, `theme` → `lightBlue`
+
+### ২. Book Consultation Card Centering Fix (Image-LDC.webp section)
+- **সমস্যা:** 1366px-এর নিচে card নিচের দিকে চলে যাচ্ছিল — image shorter হলে min-height (450px) section-এ blank space তৈরি হতো
+- **সমাধান:** `.book-consultation.no-margin picture` কে `position: absolute` করা হয়েছে, `height: 100%; object-fit: cover` দিয়ে সবসময় section fill করে
+
+### ৩. banner-badge.jpg Fix
+- **সমস্যা:** `desktop-visible` class এর কারণে 991px থেকেই image হারিয়ে যাচ্ছিল
+- **সমাধান:** HTML থেকে `desktop-visible` class সরানো হয়েছে
+- Tablet ও Mobile-এ badge column-এর জন্য CSS যোগ — padding parent col-এ দেওয়া হয়েছে, image centered, `width: 80%` (tablet) / `75%` (mobile)
+
+### ৪. Mobile Typography Optimization (<768px)
+`/* MOBILE TYPOGRAPHY — OPTIMIZED */` section সম্পূর্ণ rewrite করা হয়েছে:
+
+| Element | আগে | এখন |
+|---|---|---|
+| h1, h2 | 26px / 1.3 | 26px / **1.35** + margin-bottom |
+| section-title | 24px | **26px** |
+| it-content h3 | 24px | **22px** |
+| h3 global | 18px | **19px** |
+| h4 | 16px | **17px** |
+| p line-height | 1.6 | **1.7** |
+
+নতুন additions:
+- `notice-banner` mobile font-size: 13px
+- `wc-box`, `faq-box`, `our-location-info-box` — better internal padding
+- `it-content .btn-viewmore` — margin-top: 20px
+- `marketing-area-contact` form — consistent padding + input sizing
+- `btn-viewmore` — `padding: 13px 35px` (touch-friendly)
+- `image-text-section .container` → `padding: 35px` (consistent)
+
+### ৫. Marketing Area Contact Form — Mobile Width
+- `input:not([type="submit"])` → `width: 92%` only mobile
+- `textarea` → `width: 92%` only mobile
+
+### ६. Header Mobile Optimization
+- `ct-topbar` (language flags) → `display: none !important` on mobile
+- `header-right` → `flex-direction: column`, buttons stack উপর-নিচে
+- `top-links a` ও `phone-header a` → same padding (`11px 40px`), `min-width: 200px`, centered
+- `header-right` top/bottom padding → `20px`, gap → `0`
+
+---
+
 ## 11 March 2026 — Full Responsive + Mobile Design Match
 
 ### কাজের সারসংক্ষেপ

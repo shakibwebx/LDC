@@ -296,7 +296,7 @@ p { font-size: 16px; }
 .doctify-header .doctify_stars_item_7e95db4b:after { background-size:16px 22px !important; }
 
 
-.doctify-section { margin-bottom: 70px; background-color: #f4f7fd; color: #000; width: 100%; }
+.doctify-section { background-color: #f4f7fd; color: #000; width: 100%; }
 .doctify-section2 {margin-bottom: 70px; background-color: #f4f7fd; color: #000; width: 100%; }
 .doctify-section2 * { color: #000 !important; }
 .doctify-section2 [class*="star"],
@@ -499,14 +499,15 @@ p span.dr-sign { font:normal 200.0% 'Euphoria Script'; color:#2c3a66;}
 .book-consultation picture { display: block; position: relative; width: 100%; height: auto; }
 .book-consultation picture img { width: 100%; height: auto; object-fit: cover; display: block; }
 .book-consultation.no-margin { min-height: 450px; }
-.book-consultation.no-margin picture img { object-position: center 70%; }
+.book-consultation.no-margin picture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.book-consultation.no-margin picture img { width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
 .book-consultation .global-overlay { background: transparent !important; position: absolute !important; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }
 .consultation-card { background: rgba(218, 227, 255, 0.88); border-radius: 16px; padding: 48px 100px; min-width: 620px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); text-align: center; display: inline-flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; margin-left: -40px; }
 .book-consultation h2 { margin-bottom: 25px; font-size: 220%; color: #1a2a5e; font-style: normal; line-height: 1.2; white-space: nowrap; }
 .book-consultation h2 em { font-style: italic; color: #1a2a5e; }
 .book-consultation .btn-viewmore a { background: #FFBDBE; color: #000; border-radius: 50px; padding: 15px 50px; font-size: 16px; letter-spacing: 0.3px; }
 .book-consultation .btn-viewmore a:hover { background: #f4a6a0; color: #000; }
-.book-consultation-box {
+.consultation-card {
     padding: 48px 100px;
     min-width: 620px;
     background-color: rgba(218, 227, 255, 0.88);
@@ -1408,7 +1409,7 @@ p, .need-help-content p, .wc-box .wc-content p, .about-owner-left-bg .about-owne
 
 @media (max-width: 1199.98px) {
     .consultation-card,
-    .book-consultation-box { padding: 40px 50px; min-width: auto; margin-left: 0; }
+    .consultation-card { padding: 40px 50px; min-width: auto; margin-left: 0; }
     .pain-free-section .pain-free-text-col .it-content { padding-left: 12%; padding-right: 5%; }
     .about-owner-left-bg .about-owner-content { padding-left: 12%; padding-right: 5%; }
     .lectures-section .lectures-left .it-content { padding: 40px 8% 40px 12%; }
@@ -1431,7 +1432,7 @@ p, .need-help-content p, .wc-box .wc-content p, .about-owner-left-bg .about-owne
     .marketing-area-image img { width: 100%; max-height: 420px; object-fit: cover; }
 
     .consultation-card,
-    .book-consultation-box { padding: 32px 24px; min-width: auto; margin-left: 0; }
+    .consultation-card { padding: 32px 24px; min-width: auto; margin-left: 0; }
 
     .section-title { font-size: 50px !important; }
     h1, h2 { font-size: 50px; }
@@ -1563,7 +1564,7 @@ p, .need-help-content p, .wc-box .wc-content p, .about-owner-left-bg .about-owne
     .layer-805-section .layer-805-cta { text-align: center !important; }
 
     .consultation-card,
-    .book-consultation-box { padding: 30px 20px; min-width: auto !important; margin-left: 0 !important; }
+    .consultation-card { padding: 30px 20px; min-width: auto !important; margin-left: 0 !important; }
     .book-consultation.no-margin { min-height: 320px; }
 
     .our-location-content { padding-right: 0; margin-bottom: 30px; }
@@ -1642,7 +1643,7 @@ p, .need-help-content p, .wc-box .wc-content p, .about-owner-left-bg .about-owne
     .wc-box .wc-content h4 { font-size: 20px; }
 
     .consultation-card,
-    .book-consultation-box { padding: 24px 15px; }
+    .consultation-card { padding: 24px 15px; }
 }
 
 
@@ -1680,12 +1681,12 @@ img { max-width: 100%; }
 /* Mobile */
 @media (max-width: 767.98px) {
     .logo { width: 200px; }
-    .header-right { justify-content: center; flex-wrap: wrap; gap: 6px; padding: 8px 0; border-top: 1px solid rgba(255,255,255,0.2); margin-top: 8px; width: 100%; }
-    .top-links { padding: 0; }
-    .phone-header { padding-left: 0; }
-    .top-links a { padding: 11px 22px !important; font-size: 14px !important; }
-    .phone-header a { padding: 11px 22px !important; font-size: 14px !important; }
-    .ct-topbar { padding-right: 0; }
+    .ct-topbar { display: none !important; }
+    .header-right { flex-direction: column; align-items: center; gap: 0; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.2); margin-top: 8px; width: 100%; }
+    .top-links { padding: 0; text-align: center; }
+    .phone-header { padding-left: 0; text-align: center; }
+    .top-links a,
+    .phone-header a { padding: 11px 40px !important; font-size: 14px !important; display: inline-block; min-width: 200px; text-align: center; }
 }
 
 /* ============================================
@@ -1781,7 +1782,7 @@ img { max-width: 100%; }
     .book-consultation picture img { min-height: 340px; object-fit: cover; }
     .book-consultation h2 { font-size: 36px !important; white-space: normal !important; }
     .consultation-card,
-    .book-consultation-box { margin-left: 0 !important; padding: 36px 40px !important; min-width: auto !important; }
+    .consultation-card { margin-left: 0 !important; padding: 36px 40px !important; min-width: auto !important; }
 }
 
 /* Mobile */
@@ -1789,7 +1790,7 @@ img { max-width: 100%; }
     .book-consultation picture img { min-height: 280px; }
     .book-consultation h2 { font-size: 28px !important; white-space: normal !important; }
     .consultation-card,
-    .book-consultation-box { padding: 28px 20px !important; min-width: auto !important; margin-left: 0 !important; width: 92%; }
+    .consultation-card { padding: 28px 20px !important; min-width: auto !important; margin-left: 0 !important; width: 92%; }
     .book-consultation.no-margin { min-height: 280px; }
 }
 
@@ -1798,7 +1799,7 @@ img { max-width: 100%; }
     .book-consultation picture img { min-height: 240px; }
     .book-consultation h2 { font-size: 24px !important; }
     .consultation-card,
-    .book-consultation-box { padding: 24px 15px !important; width: 96%; }
+    .consultation-card { padding: 24px 15px !important; width: 96%; }
 }
 
 /* ============================================
@@ -1859,6 +1860,8 @@ img { max-width: 100%; }
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .doctify-col .it-image img { width: 80% !important; height: auto !important; }
+    .image-text-section.full-width.bg-blue .col-md-6:not(.doctify-col) { display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .image-text-section.full-width.bg-blue .col-md-6:not(.doctify-col) .it-image img { width: 80%; height: auto; display: block; margin: 0 auto; }
 }
 
 /* Mobile */
@@ -1867,6 +1870,9 @@ img { max-width: 100%; }
     .doctify-col { padding: 30px 0; }
     .doctify-col .it-image { padding: 20px; }
     .doctify-col .it-image img { width: 75% !important; height: auto !important; }
+    .image-text-section.full-width.bg-blue .col-md-6:not(.doctify-col) { padding: 30px 20px; background: #11245a; }
+    .image-text-section.full-width.bg-blue .col-md-6:not(.doctify-col) .it-image { text-align: center; }
+    .image-text-section.full-width.bg-blue .col-md-6:not(.doctify-col) .it-image img { width: 75%; height: auto; display: block; margin: 0 auto; }
 }
 
 /* ============================================
@@ -2096,74 +2102,120 @@ img { max-width: 100%; }
 
 
 /* ==============================================
-   MOBILE TYPOGRAPHY — REFERENCE DESIGN MATCH
+   MOBILE TYPOGRAPHY — OPTIMIZED
    ============================================== */
 
 @media (max-width: 767.98px) {
 
-    /* Section titles & main headings */
-    h1, h2                                              { font-size: 26px !important; line-height: 1.3 !important; }
-    .section-title                                      { font-size: 24px !important; line-height: 1.3 !important; }
-    .it-content h3                                      { font-size: 24px !important; line-height: 1.3 !important; }
-    .it-content .initial-consultation-heading           { font-size: 24px !important; }
-    .leading-experts-title                              { font-size: 24px !important; }
-    .book-consultation h2                               { font-size: 24px !important; }
-    .about-owner-content h2                             { font-size: 24px !important; }
-    .about-owner-left-bg .about-owner-content h2        { font-size: 24px !important; }
-    .pain-free-section .pain-free-text-col .it-content h3   { font-size: 24px !important; }
-    .surgical-section .surgical-text-col .it-content h3     { font-size: 24px !important; }
-    .paediatric-section .paediatric-text-col .it-content h3 { font-size: 24px !important; }
-    .layer-805-title                                    { font-size: 24px !important; }
-    .need-help-title                                    { font-size: 24px !important; }
-    .our-location-title                                 { font-size: 24px !important; }
-    .why-choose-section h2                              { font-size: 24px !important; }
-    .faq-section h2                                     { font-size: 24px !important; }
-    .finance-section .grey-box-content .section-title   { font-size: 24px !important; }
-    .video-home .section-title                          { font-size: 24px !important; }
+    /* ---- Main headings ---- */
+    h1, h2                                              { font-size: 26px !important; line-height: 1.35 !important; margin-bottom: 14px; }
+    .section-title                                      { font-size: 26px !important; line-height: 1.35 !important; margin-bottom: 16px; }
+    .it-content h3                                      { font-size: 22px !important; line-height: 1.35 !important; margin-bottom: 12px; }
+    .it-content .initial-consultation-heading           { font-size: 22px !important; }
+    .leading-experts-title                              { font-size: 22px !important; }
+    .book-consultation h2                               { font-size: 22px !important; }
+    .about-owner-content h2                             { font-size: 22px !important; }
+    .about-owner-left-bg .about-owner-content h2        { font-size: 22px !important; }
+    .pain-free-section .pain-free-text-col .it-content h3   { font-size: 22px !important; }
+    .surgical-section .surgical-text-col .it-content h3     { font-size: 22px !important; }
+    .paediatric-section .paediatric-text-col .it-content h3 { font-size: 22px !important; }
+    .layer-805-title                                    { font-size: 22px !important; }
+    .need-help-title                                    { font-size: 22px !important; }
+    .our-location-title                                 { font-size: 22px !important; }
+    .why-choose-section h2                              { font-size: 22px !important; }
+    .faq-section h2                                     { font-size: 22px !important; }
+    .finance-section .grey-box-content .section-title   { font-size: 22px !important; }
+    .video-home .section-title                          { font-size: 22px !important; }
     .lectures-section .lectures-left .it-content h3,
-    .lectures-section .lectures-left .it-content .section-title { font-size: 24px !important; }
-    .mid-content h3                                     { font-size: 24px !important; }
+    .lectures-section .lectures-left .it-content .section-title { font-size: 22px !important; }
+    .mid-content h3                                     { font-size: 22px !important; }
 
-    /* Sub-headings */
-    h3                                                  { font-size: 18px; line-height: 1.4; }
-    h4                                                  { font-size: 16px; line-height: 1.4; }
-    .wc-box .wc-content h4                              { font-size: 18px !important; }
-    .faq-box h3                                         { font-size: 16px !important; }
+    /* ---- Sub-headings ---- */
+    h3                                                  { font-size: 19px !important; line-height: 1.4; margin-bottom: 10px; }
+    h4                                                  { font-size: 17px; line-height: 1.4; }
+    h5                                                  { font-size: 15px; line-height: 1.4; }
+    .wc-box .wc-content h4                              { font-size: 17px !important; }
+    .faq-box h3                                         { font-size: 16px !important; line-height: 1.45; }
     .it-content h4                                      { font-size: 16px; }
-    .our-location-info-box h3                           { font-size: 16px; }
+    .our-location-info-box h3                           { font-size: 16px !important; }
 
-    /* Body text */
-    p                                                   { font-size: 15px !important; line-height: 1.6 !important; }
-    .it-content p                                       { font-size: 15px !important; }
-    .faq-box p                                          { font-size: 14px !important; }
+    /* ---- Body text ---- */
+    p                                                   { font-size: 15px !important; line-height: 1.7 !important; margin-bottom: 14px; }
+    .it-content p                                       { font-size: 15px !important; line-height: 1.7 !important; }
+    .faq-box p                                          { font-size: 14px !important; line-height: 1.65 !important; }
     .our-location-content p,
     .our-location-info-box p                            { font-size: 14px !important; }
     .need-help-content p                                { font-size: 14px !important; }
-    .about-owner-left-bg .about-owner-content p         { font-size: 14px !important; }
+    .about-owner-left-bg .about-owner-content p         { font-size: 15px !important; line-height: 1.7 !important; }
     .lectures-section .lectures-left .it-content p      { font-size: 14px !important; }
-    .finance-section .grey-box-content p                { font-size: 14px !important; }
-    .layer-805-content p                                { font-size: 14px !important; }
-    .wc-box .wc-content p                               { font-size: 14px !important; }
+    .finance-section .grey-box-content p                { font-size: 15px !important; }
+    .layer-805-content p                                { font-size: 15px !important; }
+    .wc-box .wc-content p                               { font-size: 14px !important; line-height: 1.6 !important; }
 
-    /* Footer */
+    /* ---- Notice banner ---- */
+    .notice-banner                                      { font-size: 13px; padding: 6px 12px; text-align: center; }
+
+    /* ---- Footer ---- */
     .footlinks ul li a                                  { font-size: 14px; }
-    .address-footer                                     { font-size: 14px; line-height: 1.7; }
+    .address-footer                                     { font-size: 14px; line-height: 1.75; }
     .sm-icons b                                         { font-size: 14px; }
     .copyright                                          { font-size: 12px; }
 
-    /* Section padding adjustments */
-    .light-bg, .dark-bg, .dark2-bg, .dark3-bg           { padding: 40px 0; }
-    .image-text-section.full-width .it-content          { padding-top: 20px !important; padding-bottom: 20px !important; }
-    .why-choose-section                                 { padding: 0 0 10px; }
-    .faq-section                                        { margin-bottom: 30px; }
-    .video-home                                         { padding: 30px 0 10px; }
-    .finance-section                                    { padding: 30px 0 15px; }
+    /* ---- Section padding ---- */
+    .light-bg, .dark-bg, .dark2-bg, .dark3-bg           { padding: 45px 0; }
+    .image-text-section                                 { padding-top: 0; padding-bottom: 0; }
+    .image-text-section .container                      { padding-top: 35px; padding-bottom: 35px; }
+    .image-text-section.full-width .it-content          { padding: 30px 20px !important; }
+    .why-choose-section                                 { padding: 10px 0 20px; }
+    .why-choose-section h2                              { margin-bottom: 20px; }
+    .video-home                                         { padding: 35px 0 15px; }
+    .finance-section                                    { padding: 35px 0 20px; }
+    .doctify-section                                    { padding: 10px 0; }
+    .doctify-section2                                   { padding: 0; margin-bottom: 10px; }
+    .form-section                                       { padding: 40px 15px; }
+    .faq-section                                        { padding: 0 10px 20px; }
+
+    /* ---- it-content spacing ---- */
+    .it-content                                         { padding-top: 10px; padding-bottom: 10px; }
+    .it-content h3 + p,
+    .it-content h2 + p                                  { margin-top: 10px; }
+    .it-content .btn-viewmore                           { margin-top: 20px; }
+
+    /* ---- Why Choose cards ---- */
+    .wc-box                                             { padding: 24px 18px; margin-bottom: 12px; }
+    .wc-box .wc-content h4                              { margin-bottom: 8px; }
+
+    /* ---- FAQ ---- */
+    .faq-box                                            { padding: 16px 0; }
+    .faq-box h3                                         { margin-bottom: 8px; }
+
+    /* ---- Video section ---- */
+    .video-list-item                                    { margin-bottom: 20px; }
+    .video-home h5                                      { font-size: 14px; margin-bottom: 20px; }
+
+    /* ---- Need Help form ---- */
+    .need-help-form-wrap input,
+    .need-help-form-wrap textarea                       { font-size: 15px; padding: 10px 14px; }
+    .need-help-form-wrap textarea                       { min-height: 90px; }
+
+    /* ---- Our Location ---- */
+    .our-location-info-box                              { padding: 24px 18px; margin-bottom: 15px; }
+
+    /* ---- Marketing area contact form ---- */
+    .marketing-area-contact                             { padding: 30px 18px 40px; }
+    .marketing-area-contact h3                          { font-size: 17px !important; margin-bottom: 14px; }
+    .marketing-area-contact input:not([type="submit"]) { padding: 10px 12px; font-size: 15px; width: 92%; }
+    .marketing-area-contact textarea                    { padding: 10px 12px; font-size: 15px; min-height: 80px; width: 92%; }
+
+    /* ---- Buttons ---- */
+    .btn-viewmore a,
+    .btn-primary-cta a                                  { padding: 13px 35px !important; font-size: 15px !important; }
 }
 
 /* Small phones (< 576px) */
 @media (max-width: 575.98px) {
-    h1, h2                                              { font-size: 22px !important; }
-    .section-title                                      { font-size: 20px !important; }
+    h1, h2                                              { font-size: 22px !important; line-height: 1.35 !important; }
+    .section-title                                      { font-size: 22px !important; }
     .it-content h3                                      { font-size: 20px !important; }
     .book-consultation h2                               { font-size: 20px !important; }
     .about-owner-content h2                             { font-size: 20px !important; }
@@ -2183,15 +2235,20 @@ img { max-width: 100%; }
     .leading-experts-title                              { font-size: 20px !important; }
     .it-content .initial-consultation-heading           { font-size: 20px !important; }
     .mid-content h3                                     { font-size: 20px !important; }
+    h3                                                  { font-size: 18px !important; }
     .wc-box .wc-content h4                              { font-size: 16px !important; }
-    p                                                   { font-size: 14px !important; }
+    p                                                   { font-size: 14px !important; line-height: 1.65 !important; }
+    .image-text-section .container                      { padding-top: 28px; padding-bottom: 28px; }
+    .light-bg, .dark-bg, .dark2-bg, .dark3-bg           { padding: 35px 0; }
+    .marketing-area-contact                             { padding: 24px 15px 32px; }
 }
 
 /* Very small phones (< 375px) */
 @media (max-width: 374.98px) {
     h1, h2                                              { font-size: 20px !important; }
-    .section-title                                      { font-size: 18px !important; }
+    .section-title                                      { font-size: 20px !important; }
     .it-content h3                                      { font-size: 18px !important; }
+    h3                                                  { font-size: 16px !important; }
     .about-owner-content h2,
     .about-owner-left-bg .about-owner-content h2        { font-size: 18px !important; }
     .layer-805-title, .need-help-title,
@@ -2199,4 +2256,5 @@ img { max-width: 100%; }
     .why-choose-section h2, .faq-section h2             { font-size: 18px !important; }
     .wc-box .wc-content h4                              { font-size: 15px !important; }
     p                                                   { font-size: 13px !important; }
+    .image-text-section .container                      { padding-top: 24px; padding-bottom: 24px; }
 }
