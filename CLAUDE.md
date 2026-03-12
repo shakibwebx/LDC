@@ -5,6 +5,30 @@
 
 ---
 
+## 12 March 2026 — Typography & Button Fixes (1366px)
+
+### ১. `p` tag font-size 18px → 16px (`@media max-width: 1366px`)
+- Global `p` rule line 25 → `16px`
+- সমস্যা: `.it-content p { font-size: 18px }` (line 367) globally set ছিল, media query override করছিল না (CSS ordering issue)
+- সমাধান: `@media (max-width: 1366px)` block-এ সব `.it-content p` variants-এ `font-size: 16px !important` যোগ
+
+### ২. Why Choose Section — Card Title & Paragraph
+- `.wc-box .wc-content h4` → `24px !important` (ছিল globally 30px)
+- `.wc-box .wc-content p` → `16px !important` (ছিল globally 18px, `.wc-box .wc-content p` থেকে apply হচ্ছিল)
+- উভয়ই `@media (max-width: 1366px)` block-এ যোগ করা হয়েছে
+
+### ৩. সব Button Padding → `15px 50px` (`@media max-width: 1366px`)
+নিচের সব selectors-এ `padding: 15px 50px !important`:
+- `.top-links a`, `.phone-header a`
+- `.btn-viewmore a`, `.btn-primary-cta a`
+- `.need-help-btn`, `.layer-805-cta a`
+- `.about-owner-content .btn-viewmore a`
+- `.dark-form .form-section-content .btn-viewmore a`
+- `.submit-button input` (all variants)
+- `.marketing-area-contact .submit-button input`
+
+---
+
 ## 11 March 2026 — Session 2 (Fixes & Optimizations)
 
 ### ১. Doctify Widget Replace (দুটো জায়গায়)

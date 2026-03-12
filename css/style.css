@@ -22,8 +22,33 @@ h1 span, h2 span { display:block; }
 
 @media (max-width: 1366px) {
     .section-title { font-size: 250.0% !important;}
-    p { font-size: 18px; }
+    p { font-size: 16px; }
+    .it-content p { font-size: 16px !important; }
+    .pain-free-section .pain-free-text-col .it-content p { font-size: 16px !important; }
+    .surgical-section .surgical-text-col .it-content p { font-size: 16px !important; }
+    .paediatric-section .paediatric-text-col .it-content p { font-size: 16px !important; }
+    .lectures-section .lectures-left .it-content p { font-size: 16px !important; }
     .image-text-section .dark-box ul li {font-size:100.0% !important; }
+
+    /* WHY CHOOSE — card title & p */
+    .wc-box .wc-content h4 { font-size: 24px !important; }
+    .wc-box .wc-content p  { font-size: 16px !important; }
+
+    /* BUTTONS — 15px 50px below 1366px */
+    .top-links a,
+    .phone-header a,
+    .btn-viewmore a,
+    .btn-primary-cta a,
+    .need-help-btn,
+    .layer-805-cta a,
+    .about-owner-content .btn-viewmore a,
+    .dark-form .form-section-content .btn-viewmore a,
+    .submit-button input,
+    .contact-box .submit-button input,
+    .contact-form .submit-button input,
+    .contact-footer .submit-button input,
+    .inner-form .submit-button input,
+    .marketing-area-contact .submit-button input { padding: 15px 50px !important; }
 }
 
 .page-title h1 {font:700 50px 'aktiv-grotesk', sans-serif; margin: 0 0 40px 0; color:#2c3a66; }
