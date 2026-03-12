@@ -27,6 +27,46 @@
 - `.submit-button input` (all variants)
 - `.marketing-area-contact .submit-button input`
 
+### ৪. Paediatric Section (Mobile)
+- `.it-image` div-এ `paediatric-img` class যোগ
+- `.paediatric-section .paediatric-img img` → `height: 320px !important` (mobile only)
+- `.paediatric-section .paediatric-text-col .it-content h3` → `42px !important; text-align: left !important` (2 conflicting rules fixed)
+- `text-align: center` → `text-align: left` for `.it-content` wrapper
+
+### ৫. Dermatology Lectures Section (Mobile)
+- `<br class="mobile-br">` যোগ after "Dermatology" (before `<em>Lectures</em>`)
+- `.lectures-section .lectures-row` → `flex-direction: column-reverse !important` (image উপরে, text নিচে)
+- `.it-content` → `text-align: left`
+- Title → `42px !important; text-align: left !important` (2 conflicting rules fixed: ছিল 22px ও 20px)
+
+### ৬. Our Location Section (Mobile)
+- `.our-location-title` → `42px !important; text-align: center !important` (4 conflicting rules fixed)
+- `.our-location-content p` → `text-align: left !important`
+- `.our-location-info-box h3` → `24px !important` (ছিল 16px conflict)
+
+### ৭. Need Help Section (Mobile)
+- `.need-help-title` → `42px !important; text-align: center !important` (4 conflicting rules fixed)
+- `.need-help-content p` → `text-align: left !important`
+
+### ৮. Hero Form (marketing-area-contact) Overflow Fix (Mobile)
+- **সমস্যা:** `.marketing-area-contact { width: 530px }` globally fixed — mobile-এ right side দিয়ে overflow হচ্ছিল
+- **সমাধান:** `width: 100% !important; max-width: 100%; box-sizing: border-box` mobile block-এ যোগ
+- `.row` → `margin-left/right: 0`, `.col-md-6/.col-md-12` → `padding: 0` (Bootstrap negative margin fix)
+- Input/textarea → `width: 100% !important; box-sizing: border-box`
+- "Get in Touch Now" h3 → `text-align: left`
+- "Private Dermatologists" h1 → `text-align: left`
+
+### ৯. Header Button Area (Mobile)
+- `.header-right` → `background: #dae3ff` (mobile only)
+- `.header-top` → `padding-bottom: 0` (extra bottom padding সরানো)
+- `.col-md-12.col-lg-7` → `padding-left/right: 0` (Bootstrap 15px side padding সরানো, full width)
+- `.header-right` → `margin-top: 20px` (logo থেকে space)
+- Tel button → `color: #394a7b !important; border-color: #394a7b !important`
+
+### ১০. সব `p` tag Mobile → 16px
+- `@media (max-width: 767.98px)` ও `@media (max-width: 575.98px)` — সব p selectors `14px`/`15px` → `16px !important`
+- Affected: `p`, `.it-content p`, `.faq-box p`, `.our-location-content p`, `.our-location-info-box p`, `.need-help-content p`, `.about-owner-left-bg .about-owner-content p`, `.lectures-section ... p`, `.finance-section ... p`, `.layer-805-content p`
+
 ---
 
 ## 11 March 2026 — Session 2 (Fixes & Optimizations)
