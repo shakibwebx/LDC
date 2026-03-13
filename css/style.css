@@ -88,6 +88,9 @@ h1 span, h2 span { display:block; }
 }
 
 /* Finance logos: slider hidden on mobile, stacked logos shown */
+.finance-logos-mobile {
+    display: none;
+}
 @media (max-width: 767.98px) {
     #insurance-slider { display: none; }
     .finance-section .bx-wrapper .bx-controls-direction,
