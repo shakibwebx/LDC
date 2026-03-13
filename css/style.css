@@ -2184,6 +2184,12 @@ img { max-width: 100%; }
     .need-help-form-wrap textarea { font-size: 16px; }
 }
 
+@media (max-width: 767.98px) {
+    .initial-consultation-text {
+        margin-top: 17px !important;
+    }
+}
+
 /* ============================================
    OUR LOCATION SECTION
    ============================================ */
