@@ -63,7 +63,18 @@
 - `.header-right` → `margin-top: 20px` (logo থেকে space)
 - Tel button → `color: #394a7b !important; border-color: #394a7b !important`
 
-### ১০. সব `p` tag Mobile → 16px
+### ১০. Mobile Header — Logo | Flags | Hamburger Inline (CSS-only, Desktop Untouched)
+- **লক্ষ্য:** mobile-এ `[Logo] [🇬🇧🇸🇦] [☰]` একই row-এ, নিচে `[Book] [Tel]` dae3ff bg-তে
+- **Approach:** HTML পরিবর্তন না করে CSS-only
+- `header { position: relative }` → hamburger-এর absolute positioning anchor
+- `header-top { position: relative; overflow: visible }` → ct-topbar-এর absolute anchor
+- `.ct-topbar { position: absolute; right: 55px; top: -19px; display: flex !important }` → logo row-এ ভাসে
+- `.navbar-toggler { top: 22px !important; right: 15px !important }` → logo row-এর একদম ডানে
+- `.header-right { background: #dae3ff; margin-top: 30px }` → buttons নিচে, dae3ff bg
+- `.ct-topbar ul li a` padding removed from mobile block (was `6px 10px`)
+- **Trade-off:** magic number (`top: -19px`) — logo height বদলালে adjust লাগবে। Right way হতো HTML restructure, কিন্তু desktop untouched রাখতে এই approach নেওয়া হয়েছে
+
+### ১১. সব `p` tag Mobile → 16px
 - `@media (max-width: 767.98px)` ও `@media (max-width: 575.98px)` — সব p selectors `14px`/`15px` → `16px !important`
 - Affected: `p`, `.it-content p`, `.faq-box p`, `.our-location-content p`, `.our-location-info-box p`, `.need-help-content p`, `.about-owner-left-bg .about-owner-content p`, `.lectures-section ... p`, `.finance-section ... p`, `.layer-805-content p`
 
