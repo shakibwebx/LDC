@@ -19,6 +19,41 @@
 - **সমস্যা:** Global rule `h1 span, h2 span { display:block; }` (line 18) span-কে block করে দিচ্ছিল, ফলে text দুই লাইনে ভেঙে যাচ্ছিল
 - **সমাধান:** `.image-text-section h1 span { display: inline; }` global CSS-এ যোগ (line 392)
 
+### ৪. Mobile UI Tweaks — Header, Hero & Content
+- Navbar logo mobile source update → `images/mobile-logo.png` (`<picture>` source change in `header .logo`).
+- Language flags (`.ct-topbar`) mobile positioning fine-tuned (right/top values) এবং ফ্ল্যাগ icon size mobile/tablet এ adjust (`height: 12px`).
+- `"Consultant Dermatologists in London"` ব্লকের পরে CQC badge-মত `Layer-49.png` image শুধুমাত্র mobile-এ দেখানো হয়েছে (`.mobile-only` utility class যোগ + CSS).
+- Mobile typography: `.it-content h3` এর bottom gap কমানোর জন্য `margin-bottom: -12px` (`@media (max-width: 767.98px)`).
+- `.it-content p` mobile-এ paragraph গ্যাপ কমানোর জন্য `margin-bottom: 0` override করা হয়েছে।
+
+### ৫. Dermatologists Care Section — Mobile Spacing
+- `images/dermatologists-care.jpg` image-এর wrapper-এ (`.dermatologists-care-img`) generic mobile `margin-bottom` override করে only এই image-এর উপরে ও নিচের gap টার্গেট করা হয়েছে।
+- Image element-এ আলাদা class (`.dermatologists-care-photo`) যোগ করে mobile-এ `margin-top: -10px` দিয়ে text-এর সাথে vertical balance ঠিক করা হয়েছে।
+
+### ৬. Media Appearances — As Featured (Mobile)
+- "Media Appearances" সেকশনে desktop-এর existing `emrassing-body.png` রাখা হয়েছে, কিন্তু mobile-এ text badge replace করে নতুন `Layer42.png` image badge দেখানো হয়েছে (`.as-featured-mobile-img`).
+- CSS: `@media (max-width: 767.98px)` এ `.as-featured-img` hide, `.embarrassing-bodies-text` ভিতরে image block হিসেবে render.
+
+### ৭. Finance & Medical Insurance — Desktop Slider + Mobile Logos
+- Desktop behavior restore: `#insurance-slider` আবার সব larger breakpoint-এ normal bxSlider মত কাজ করছে।
+- Mobile-only layout: slider + arrows সম্পূর্ণ hide (`#insurance-slider` + `.bx-prev/.bx-next` display none) এবং নতুন `.finance-logos-mobile` wrapper-এ তিনটি logo vertically stack:
+  - `images/aviva2-v2.png`
+  - `images/Cigna-Logo.png`
+  - `images/Layer43.png`
+- Mobile logo গুলোর size ছোট রাখা হয়েছে (`max-width ~100px`), column gap ও উপরে/নিচে extra spacing (`margin-top: -80px; margin-bottom: 30px`).
+
+### ৮. Aesthetic (Layer-805) Section — Mobile Height & Padding
+- Mobile background image এখন `aesthetic-mobile.png` থেকে load হচ্ছে, side padding `0` করা হয়েছে (`padding: 40px 0`) যাতে design edge-to-edge লাগে।
+- Height control: `min-height: 100vh` → `min-height: 600px` করা হয়েছে mobile-এ, যাতে very-tall ডিভাইসে section অতিরিক্ত লম্বা না হয় কিন্তু consistent hero-height feel থাকে।
+
+### ৯. Need Help Section — Mobile Padding
+- Mobile-এ `.need-help-section` left/right padding `15px` থেকে `0` করা হয়েছে (`padding: 40px 0 !important;`) যাতে content container full-width use করে।
+- Existing typography overrides (`.need-help-title`, `.need-help-content p`, button alignment) অপরিবর্তিত রেখে শুধু spacing টিউন করা হয়েছে।
+
+### ১০. Initial Consultation Copy — Mobile Readability
+- `Initial Dermatologist Consultation` সেকশনের main paragraph-এ নতুন class `initial-consultation-text` যোগ।
+- `@media (max-width: 767.98px)` এ `margin-top: 15px` দিয়ে heading আর paragraph-এর মাঝে breathing space বাড়ানো হয়েছে।
+
 ---
 
 ## 12 March 2026 — Typography & Button Fixes (1366px)

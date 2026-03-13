@@ -87,33 +87,7 @@ h1 span, h2 span { display:block; }
     .pain-free-section .pain-free-img img { height: 310px !important; object-fit: cover; width: 100%; } 
 }
 
-/* Finance logos: slider hidden on mobile, stacked logos shown */
-.finance-logos-mobile {
-    display: none;
-}
-@media (max-width: 767.98px) {
-    #insurance-slider { display: none; }
-    .finance-section .bx-wrapper .bx-controls-direction,
-    .finance-section .bx-wrapper .bx-prev,
-    .finance-section .bx-wrapper .bx-next {
-        display: none !important;
-    }
-    .finance-logos-mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        margin-top: -80px;
-        margin-bottom: 30px;
-    }
-    .finance-logos-mobile .finance-logo {
-        max-width: 100px;
-        width: 45%;
-        height: auto;
-        display: block;
-        margin-bottom: 8px;
-    }
-}
+/* Finance logos: (was stacked-only on mobile, reverted to original slider-only implementation) */
 
 .global-overlay { position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%; }
 .global-table {width: 100%; height: 100%; display:table;}
