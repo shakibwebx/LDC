@@ -59,6 +59,7 @@ h1 span, h2 span { display:block; }
 @media (min-width: 992px) {.mobile-visible { display:none;}}
 @media (max-width: 991px) {.desktop-visible { display:none;}}
 .mobile-visible { display: none; }
+.mobile-only { display: none; }
 .mobile-br { display: none; }
 @media (max-width: 767.98px) { .mobile-br { display: block; } }
 .embarrassing-bodies-text { display: none; }
@@ -67,12 +68,50 @@ h1 span, h2 span { display:block; }
     color: #2c3a66;
     -webkit-text-stroke: 1px rgba(255,255,255,0.3);
 }
+.embarrassing-bodies-text img.as-featured-mobile-img {
+    display: block;
+    margin-top: 7px;
+}
 @media (max-width: 767.98px) {
     .as-featured-wrap { display: flex; align-items: center; gap: 12px; margin-top: -10px !important; }
     .as-featured-img { display: none !important; }
-    .embarrassing-bodies-text { display: inline; font-size: 22px; position: relative; top: -13px; }
+    .embarrassing-bodies-text { display: inline-block; position: relative; top: -13px; }
 }
-@media (max-width: 767.98px) { .mobile-visible { display: block; } .mobile-visible img { height: 320px !important; width: 100%; object-fit: cover; } .dermatologists-care-img img { height: 320px !important; width: 100%; object-fit: cover; } .leading-experts-section .layer-839-img img { height: 320px !important; object-fit: cover; width: 100%; } .pain-free-section .pain-free-img img { height: 310px !important; object-fit: cover; width: 100%; } }
+@media (max-width: 767.98px) { 
+    .mobile-visible { display: block; } 
+    .mobile-visible img { height: 320px !important; width: 100%; object-fit: cover; } 
+    .mobile-only { display: block; }
+    .mobile-only img { width: 100%; height: auto; display: block; }
+    .dermatologists-care-img img { height: 320px !important; width: 100%; object-fit: cover; } 
+    .leading-experts-section .layer-839-img img { height: 320px !important; object-fit: cover; width: 100%; } 
+    .pain-free-section .pain-free-img img { height: 310px !important; object-fit: cover; width: 100%; } 
+}
+
+/* Finance logos: slider hidden on mobile, stacked logos shown */
+@media (max-width: 767.98px) {
+    #insurance-slider { display: none; }
+    .finance-section .bx-wrapper .bx-controls-direction,
+    .finance-section .bx-wrapper .bx-prev,
+    .finance-section .bx-wrapper .bx-next {
+        display: none !important;
+    }
+    .finance-logos-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: -80px;
+        margin-bottom: 30px;
+    }
+    .finance-logos-mobile .finance-logo {
+        max-width: 100px;
+        width: 45%;
+        height: auto;
+        display: block;
+        margin-bottom: 8px;
+    }
+}
+
 .global-overlay { position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%; }
 .global-table {width: 100%; height: 100%; display:table;}
 .global-cell { width:100%; height:100%; display:table-cell; vertical-align: middle;}
@@ -406,6 +445,10 @@ p span.dr-sign { font:normal 200.0% 'Euphoria Script'; color:#2c3a66;}
 .it-content h3 strong { font-family:'aktiv-grotesk'; font-weight: 700; }
 .it-content h4 {font:700 125.0% 'aktiv-grotesk'; margin-bottom: 30px;}
 .it-content p { margin:0 0 30px; font-size: 18px; }
+
+@media (max-width: 767.98px) {
+    .it-content p { margin: 0 0 15px; }
+}
 .it-content ul { margin:0 0 30px; padding:0; list-style:none; }
 .it-content ul li { margin:0; padding:0 0 5px 20px; background:url('../images/bullet.png') no-repeat left 9px; font-size:112.5%; }
 .it-content .btn-viewmore { text-align:left; }
@@ -464,7 +507,7 @@ p span.dr-sign { font:normal 200.0% 'Euphoria Script'; color:#2c3a66;}
     align-items: center;
 }
 .layer-805-content { padding-left: 0; color: #fff; }
-.layer-805-title { color: #fff; font-family: 'mencken-std', sans-serif; font-size: 50px; margin-bottom: 20px; text-align: left; }
+.layer-805-title { color: #fff; font-family: 'mencken-std', sans-serif; font-size: 50px; margin-bottom: 5px; text-align: left; }
 .layer-805-content p { font-weight: 300; font-size: 18px; color: #fff; margin-bottom: 24px; }
 .layer-805-section .btn-viewmore,
 .layer-805-section .layer-805-cta { text-align: left !important; }
@@ -1169,7 +1212,7 @@ footer { background: #2c3a66; color:#fff; padding: 70px 0;}
 .quote b {font-size:150.0%; margin-bottom:5px;}
 .featured-section, .mid-section, .contact-section, .appointment, .faq-section, .our-team, .recent-blog{ padding:40px 0;}
 .appointment a { font-size: 18px; text-align:center; padding: 15px 12px; margin-top:30px;}
-.about-owner-content h2 { font-size:175.0%; margin-bottom:35px; }
+.about-owner-content h2 { font-size:175.0%; margin-bottom:10px; }
 .post-date, .author { width:100%;}
 .banner-content-cell p { margin:0 30px; line-height:26px;}
 .banner-content-cell span { font-size:93.5%; margin-top:10px; padding:10px 30px; }
@@ -1221,8 +1264,8 @@ p, .need-help-content p, .wc-box .wc-content p, .about-owner-left-bg .about-owne
 .appointment-content p { font-size: 16px; }
 .about-owner {background-image:none;}
 .about-owner-content { padding:0 15px; text-align:center; padding-top:60px; }
-.about-owner-content h2 { font-size:200.0%; margin-bottom:35px; }
-.about-owner-content .btn-viewmore { text-align: center; margin-bottom: 60px;}
+.about-owner-content h2 { font-size:200.0%; margin-bottom:10px; }
+.about-owner-content .btn-viewmore { text-align: center; margin-top: 35px; margin-bottom: 50px;}
 .post-date, .author { width:100%;}
 .contact-section .input-left { width:100%;}
 .contact-section .input-right { width:100%;}
@@ -1465,7 +1508,7 @@ p, .need-help-content p, .wc-box .wc-content p, .about-owner-left-bg .about-owne
     .phone-header a { padding: 10px 40px; font-size: 16px; }
     .navbar-nav li a { padding: 12px 20px; }
     .ct-topbar ul li a { padding: 6px 10px; }
-    .ct-topbar ul li a img { height: 18px; }
+    .ct-topbar ul li a img { height: 12px; }
 
     .marketing-area .row > .col-md-6 { flex: 0 0 100%; max-width: 100%; }
     .marketing-area-contact { text-align: center; }
@@ -1622,7 +1665,7 @@ p, .need-help-content p, .wc-box .wc-content p, .about-owner-left-bg .about-owne
     .map-area iframe { height: 300px; }
 
     .navbar-nav li a { padding: 12px 20px; }
-    .ct-topbar ul li a img { height: 18px; }
+    .ct-topbar ul li a img { height: 12px; }
 }
 
 /* --- Small Phones (max-width: 575px) --- */
@@ -1735,11 +1778,12 @@ img { max-width: 100%; }
     .header-top .col-md-12.col-lg-7 { padding-left: 0 !important; padding-right: 0 !important; }
 
     /* ct-topbar: absolutely positioned in logo row, right of logo, left of hamburger */
-    .ct-topbar {
+    .ct-topbar
+    {
         display: flex !important;
         position: absolute;
-        right: 55px;
-        top: -19px;
+        right: 66px;
+        top: -23px;
         align-items: center;
         z-index: 100;
     }
@@ -1844,6 +1888,12 @@ img { max-width: 100%; }
         display: block !important;
     }
     .leading-experts-section .it-image img { height: 260px !important; }
+}
+
+/* Tighter gap under Dermatologists-care image on mobile */
+@media (max-width: 767.98px) {
+    .it-image.dermatologists-care-img { margin-bottom: 0 !important; }
+    .dermatologists-care-photo { margin-top: -40px; display: block; }
 }
 
 /* Small Mobile */
@@ -2073,12 +2123,13 @@ img { max-width: 100%; }
 
 /* Mobile */
 @media (max-width: 767.98px) {
-    .layer-805-section { padding: 40px 20px; min-height: 85vh; background-attachment: scroll; background-image: url('../images/aesthetic-mobile.png') !important; background-size: cover; background-position: center center; align-items: flex-start; }
+    .layer-805-section { padding: 40px 0; min-height: 100vh; background-attachment: scroll; background-image: url('../images/aesthetic-mobile.png') !important; background-size: cover; background-position: center center; align-items: flex-start; }
     .layer-805-content { padding-left: 0; text-align: left; }
     .layer-805-title { font-size: 42px !important; text-align: left !important; }
     .layer-805-content p { text-align: left !important; }
     .layer-805-section .layer-805-cta,
     .layer-805-section .btn-viewmore { text-align: center !important; }
+    .layer-805-section .layer-805-cta { display: none !important; }
 }
 
 /* ============================================
@@ -2118,7 +2169,7 @@ img { max-width: 100%; }
 
 /* Mobile */
 @media (max-width: 767.98px) {
-    .need-help-section { padding: 40px 15px !important; }
+    .need-help-section { padding: 40px 0 !important; }
     .need-help-content { margin-bottom: 30px; text-align: center; }
     .need-help-title { font-size: 42px !important; text-align: center !important; }
     .need-help-content p { text-align: left !important; }
@@ -2233,7 +2284,7 @@ img { max-width: 100%; }
     .image-text-section .container:first-child          { padding-bottom: 8px !important; }
     .image-text-section .container:nth-child(2)         { padding-top: 8px !important; }
     .section-title                                      { font-size: 26px !important; line-height: 1.35 !important; margin-bottom: 16px; }
-    .it-content h3                                      { font-size: 22px !important; line-height: 1.35 !important; margin-bottom: 12px; }
+    .it-content h3                                      { font-size: 22px !important; line-height: 1.35 !important; margin-bottom: -12px; }
     .it-content .initial-consultation-heading           { font-size: 22px !important; }
     .image-text-section .it-content .leading-experts-title { font-size: 42px !important; text-align: left !important; }
     .book-consultation h2                               { font-size: 22px !important; }

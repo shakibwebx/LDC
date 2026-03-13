@@ -5,6 +5,22 @@
 
 ---
 
+## 13 March 2026 — Button Padding & Inline Fixes
+
+### ১. সব Button Padding → `10px 40px` (Global)
+- আগে ছিল `20px 70px` — সব button selector-এ `10px 40px` করা হয়েছে
+- Affected: `.top-links a`, `.phone-header a`, `.submit-button input` (সব variants), `.need-help-btn`, `.layer-805-cta a`, `.btn-viewmore a`, `.contact-box/.contact-form/.contact-footer/.inner-form submit`
+
+### ২. Remaining `15px 50px` → `10px 40px`
+- `.book-consultation .btn-viewmore a` সহ আরো কিছু selector-এ `15px 50px` বাকি ছিল
+- সব `padding: 15px 50px` এবং `padding: 15px 50px !important` → `10px 40px` করা হয়েছে
+
+### ৩. "Consultant Dermatologists in London" — Inline Fix
+- **সমস্যা:** Global rule `h1 span, h2 span { display:block; }` (line 18) span-কে block করে দিচ্ছিল, ফলে text দুই লাইনে ভেঙে যাচ্ছিল
+- **সমাধান:** `.image-text-section h1 span { display: inline; }` global CSS-এ যোগ (line 392)
+
+---
+
 ## 12 March 2026 — Typography & Button Fixes (1366px)
 
 ### ১. `p` tag font-size 18px → 16px (`@media max-width: 1366px`)
